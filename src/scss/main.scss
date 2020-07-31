@@ -1,0 +1,205 @@
+@import "_variables";
+@import "_mixins";
+@import "_reset";
+@import "_ui";
+@import "_forms";
+@import "_popup";
+@import "_fonts";
+
+
+//<Подключаем шрифты>=======================================================================================
+
+//</Подключаем шрифты>=======================================================================================
+
+//<ОБОЛОЧКА>===========================================================================================================
+.wrapper {
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+
+	&.loaded {}
+}
+
+body._lock {
+	overflow: hidden;
+}
+
+//sticky
+.content {
+	flex: 1 1 auto;
+}
+
+//</ОБОЛОЧКА>===========================================================================================================
+
+//<ОСНОВНАЯ СЕТКА>===========================================================================================================
+.container {
+	max-width: $mw+px;
+	margin: 0 auto;
+	width: 100%;
+	padding: 0 10px;
+}
+
+//</ОСНОВНАЯ СЕТКА>===========================================================================================================
+
+//</ОСНОВНОЙ БЛОК>===========================================================================================================
+
+// HEADER =========================================================
+.header {
+
+	// .header__container
+	&__container {
+		display: flex;
+		align-items: center;
+		position: relative;
+	}
+
+	// .header__logo
+	&__logo {
+		position: relative;
+		z-index: 2;
+	}
+
+	// .header__title
+	&__title {
+		font-size: 15px;
+		flex: 0 0 140px;
+		margin: 0px 0px 0px 30px;
+
+		@media (max-width: $md3+px) {
+			margin: 0px 0px 0px 10px;
+		}
+
+		@media (max-width: 600px) {
+			display: none;
+		}
+	}
+
+	// .header__callback
+	&__callback {
+		display: flex;
+		align-items: center;
+		margin-left: auto;
+
+		@media (max-width: $md4+px) {
+			flex-direction: column;
+			margin: 20px 0px 0px auto;
+		}
+
+	}
+
+	// .header__phone
+	&__phone {
+		display: flex;
+		flex-direction: column;
+		margin: 0px 35px 0px 0px;
+
+		@media (max-width: $md3+px) {
+			margin: 0px 15px 0px 0px;
+		}
+
+		@media (max-width: $md4+px) {
+			margin: 0px 0px 0px 0px;
+		}
+	}
+
+	// .header__btn
+	&__btn {
+		@media (max-width: $md4+px) {
+			margin: 10px 0px;
+		}
+	}
+}
+
+.phone {
+
+	// .phone__subtitle
+	&__subtitle {
+		font-size: 13px;
+		font-weight: 300;
+		margin: 0px 0px 5px 0px;
+
+		@media (max-width: $md4+px) {
+			font-size: 10px;
+		}
+	}
+
+	// .phone__item
+	&__item {
+		font-family: "RobotoSlab";
+		font-size: 17px;
+		color: $main-text-color;
+
+		@media (max-width: $md4+px) {
+			font-size: 15px;
+		}
+	}
+}
+
+//MAIN-SCREEN ===========================================================================================
+
+.main-screen {
+	padding: 110px 0 90px 0;
+	// margin: 0px 0px 30px/25px * 1em 0px;
+	padding: 110px/1170px * 100% 0 90px/1170px * 100%  0;
+	background: url("../../dist/img/main-screen-bg.jpg") center no-repeat;
+	background-size: cover;
+	@media (max-width: $md3+px){
+		background: url("../../dist/img/main-screen-bg.jpg") 45% no-repeat;
+	}
+
+}
+
+.info-main-screen {
+	// .info-main-screen__title
+	&__title {
+		font-family: "RobotoSlab";
+		@include resp-font(57, 35);
+		max-width: 640px;
+		margin: 0px 0px 40px 0px;
+	}
+
+}
+
+.box-info {
+	max-width: 540px;
+	margin: 80px 0px 0px 0px;
+	// .box-info__item
+	&__item {
+		display: flex;
+		margin: 0px 0px 30px 0px;
+		&:last-child {
+			margin: 0px 0px 0px 0px;
+		}
+	}
+	@media (max-width: $md4+px){
+		margin: 50px 0px 0px 0px;
+	}
+}
+.text-info-box {
+	margin: 0px 0px 0px 30px;
+	// .text-info-box__title
+	&__title {
+		// font-size: 18px;
+		@include resp-font(18, 15);
+		font-weight: 700;
+		line-height: calc(22 / 18);
+	}
+	// .text-info-box__subtitle
+	&__subtitle {
+		font-size: 14px;
+		font-weight: 300;
+		line-height: calc(20 / 14);
+		margin: 5px 0px 0px 0px;
+	}
+	@media (max-width: $md4+px){
+		margin: 0px 0px 0px 15px;
+	}
+}
+
+
+
+
+
+//</ОСНОВНОЙ БЛОК>===========================================================================================================
