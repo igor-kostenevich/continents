@@ -109,6 +109,11 @@ h6 {
   line-height: calc(40 / 30);
 }
 
+.title__item {
+  margin: 30px 0px 0px 0px;
+  font-weight: 700;
+}
+
 .title_mxw {
   max-width: 450px;
 }
@@ -413,16 +418,59 @@ body.ie .ibg img {
   padding: 0px 15px;
 }
 
-.btn {
-  color: #fff;
-  font-size: 11px;
-  padding: 15px 15px;
-  border-radius: 23px;
+.callback__text {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.callback .form-callback {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 40px 0px 0px 0px;
+}
+
+.callback .form-callback__name {
+  background: url("../../dist/img/icons/user-icon.png") 10% 50% no-repeat #ffffff;
+}
+
+.callback .form-callback__tel {
+  background: url("../../dist/img/icons/phone-icon.png") 10% 50% no-repeat #ffffff;
+}
+
+.callback .form-callback__button {
+  padding: 20px 35px 20px 60px;
+  border-radius: 28px;
   background-color: #ffaf02;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
   text-transform: uppercase;
 }
 
-.btn_small {
+.callback__phone {
+  font-size: 16px;
+  font-weight: 300;
+  margin: 40px 0px 0px 0px;
+}
+
+.callback__phone a {
+  color: #001e28;
+  font-family: "RobotoSlab";
+  font-size: 20px;
+  line-height: calc(27 / 20);
+  font-weight: 700;
+  padding: 2px 0px 2px 45px;
+  margin: 0px 0px 0px 30px;
+  background: url("../../dist/img/icons/mobile-phone_icon.png") left no-repeat;
+}
+
+.btn {
+  color: #fff;
+  font-size: 11px;
+  border-radius: 23px;
+  background-color: #ffaf02;
+  text-transform: uppercase;
   padding: 22px 30px 15px;
 }
 
@@ -529,12 +577,24 @@ textarea {
 }
 
 .input {
-  border-radius: 0 !important;
-  width: 100%;
+  max-width: 270px;
   display: block;
-  padding: 0px 25px;
+  padding: 20px 35px 20px 60px;
   font-size: 15px;
-  height: 100%;
+  height: 55px;
+  border-radius: 28px;
+  border: 1px solid #d1d1d1;
+  font-weight: 300;
+  color: #999999;
+  margin: 0px 30px 0px 0px;
+}
+
+.input.focus {
+  border-color: rgba(0, 0, 255, 0.425);
+}
+
+.input.err {
+  border-color: rgba(255, 0, 0, 0.445);
 }
 
 textarea.input {
@@ -983,6 +1043,10 @@ body._lock {
   padding: 0 10px;
 }
 
+.header {
+  padding: 7.5px 0px;
+}
+
 .header__container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1040,10 +1104,9 @@ body._lock {
 }
 
 .main-screen {
-  padding: 110px 0 90px 0;
-  padding: 9.40171% 0 7.69231% 0;
-  background: url("../../dist/img/main-screen-bg.jpg") center no-repeat;
-  background-size: cover;
+  padding: 9.40171% 0px 7.69231% 0px;
+  background: url("../../dist/img/main-screen-bg.jpg") center bottom no-repeat;
+  background-size: cover !important;
 }
 
 .info-main-screen__title {
@@ -1084,9 +1147,39 @@ body._lock {
   margin: 5px 0px 0px 0px;
 }
 
+.consultation {
+  padding: 100px 0 100px 0;
+  background: url("../../dist/img/consultation-bg.jpg") 50% 0% no-repeat;
+}
+
+.consultation__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.consultation__decor {
+  margin: 60px 0px;
+  height: 10px;
+  width: 100%;
+  background: url("../../dist/img/consultation-decor.svg") center no-repeat;
+}
+
 @media (min-width: 767px) {
   .title__main {
     font-size: calc(20px + 10 * (100vw / 1280));
+  }
+
+  .title__item {
+    font-size: calc(18px + 4 * (100vw / 1280));
   }
 
   .info-main-screen__title {
@@ -1098,11 +1191,72 @@ body._lock {
   }
 }
 
+@media (min-width: 992px) {
+  .callback .form-callback__button:hover {
+    background-color: #ff9d02;
+    -webkit-transition: all .1s linear 0s;
+    -o-transition: all .1s linear 0s;
+    transition: all .1s linear 0s;
+  }
+
+  .btn:hover {
+    background-color: #ff9d02;
+    -webkit-transition: all .1s linear 0s;
+    -o-transition: all .1s linear 0s;
+    transition: all .1s linear 0s;
+  }
+
+  .phone__item:hover {
+    color: #ff9d02;
+    -webkit-transition: color .1s linear 0s;
+    -o-transition: color .1s linear 0s;
+    transition: color .1s linear 0s;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .callback .form-callback__button {
+    padding: 20px 22px 20px 22px;
+  }
+
+  .input {
+    padding: 20px 5px 20px 50px;
+    margin: 0px 15px 0px 0px;
+  }
+}
+
 @media (max-width: 767.98px) {
   body.lock {
     width: 100%;
     position: fixed;
     overflow: hidden;
+  }
+
+  .callback .form-callback {
+    display: inline-block;
+  }
+
+  .callback__phone a {
+    margin: 15px 0px 0px 0px;
+    display: block;
+    text-align: left;
+  }
+
+  .callback {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .input {
+    margin: 0px 0px 15px 0px;
   }
 
   .form__info {
@@ -1122,11 +1276,19 @@ body._lock {
   .main-screen {
     background: url("../../dist/img/main-screen-bg.jpg") 45% no-repeat;
   }
+
+  .consultation {
+    padding: 50px 0 50px 0;
+  }
 }
 
 @media (max-width: 767px) {
   .title__main {
     font-size: calc(20px + 17 * ((100vw - 320px) / 1280));
+  }
+
+  .title__item {
+    font-size: calc(18px + 6.8 * ((100vw - 320px) / 1280));
   }
 
   .info-main-screen__title {
@@ -1145,7 +1307,7 @@ body._lock {
 }
 
 @media (max-width: 479.98px) {
-  .btn_small {
+  .btn {
     padding: 12px 12px 8px 12px;
   }
 
@@ -1173,6 +1335,10 @@ body._lock {
     font-size: 15px;
   }
 
+  .main-screen {
+    padding-bottom: 40px;
+  }
+
   .box-info {
     margin: 50px 0px 0px 0px;
   }
@@ -1182,11 +1348,19 @@ body._lock {
   }
 }
 
+.webp .callback .form-callback__name{ background: url(../../dist/img/icons/user-icon.webp) 10% 50% no-repeat #ffffff; }
+
+.webp .callback .form-callback__tel{ background: url(../../dist/img/icons/phone-icon.webp) 10% 50% no-repeat #ffffff; }
+
+.webp .callback__phone a{ background: url(../../dist/img/icons/mobile-phone_icon.webp) left no-repeat; }
+
 .webp .check.active:before{ background: url(../img/icons/check.webp) center no-repeat; }
 
 .webp .option.active:before{ background: url(../img/icons/option.webp) center no-repeat; }
 
-.webp .main-screen{ background: url(../../dist/img/main-screen-bg.webp) center no-repeat; }
+.webp .main-screen{ background: url(../../dist/img/main-screen-bg.webp) center bottom no-repeat; }
+
+.webp .consultation{ background: url(../../dist/img/consultation-bg.webp) 50% 0% no-repeat; }
 
 @media (max-width: 767.98px){
 

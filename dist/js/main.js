@@ -255,7 +255,7 @@ function forms(){
 	$.each($('input.phone'), function(index, val) {
 		$(this).attr('type','tel');
 		$(this).focus(function(){
-			$(this).inputmask('+38(999) 999-99-99',{clearIncomplete: true,clearMaskOnLostFocus: true,
+			$(this).inputmask('+38(099) 999-99-99',{clearIncomplete: true,clearMaskOnLostFocus: true,
 				"onincomplete": function(){maskclear($(this));}
 			});
 			$(this).addClass('focus');
