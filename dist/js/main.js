@@ -616,7 +616,7 @@ if (isIE()) {
 }
 
 function ibg() {
-	if (isIE()) {
+	// if (isIE()) {
 		var ibg = document.querySelectorAll(".ibg");
 
 		for (var i = 0; i < ibg.length; i++) {
@@ -624,9 +624,8 @@ function ibg() {
 				ibg[i].style.backgroundImage = 'url(' + ibg[i].querySelector('img').getAttribute('src') + ')';
 			}
 		}
-	}
+	// }
 }
-
 ibg();
 
 
