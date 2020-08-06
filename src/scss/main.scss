@@ -552,7 +552,8 @@ body._lock {
 	// .offer__info
 	.offer__info {
 		margin: 70px 0px 40px 0;
-		@media (max-width: $md3+px){
+
+		@media (max-width: $md3+px) {
 			margin: 40px 0px 20px 0px;
 		}
 	}
@@ -643,6 +644,91 @@ body._lock {
 		}
 	}
 }
+
+// Suport 
+
+.support {
+	padding: 100px/1170px * 100% 0px;
+
+	// .support__container
+	&__container {}
+
+	// .support__row
+	&__row {
+		display: flex;
+		margin: 0px 0px 68px 0px;
+
+		@media (max-width: 580px) {
+			flex-direction: column;
+		}
+	}
+
+	// .support__column
+	&__column {
+		flex: 0 0 50%;
+
+		@media (max-width: 580px) {
+			flex: 0 0 100%;
+		}
+	}
+
+	// .support__image
+	&__image {
+		padding: 0px 0px 75% 0px;
+	}
+
+	// .support__title
+	&__title {
+		color: #00222d;
+		font-family: "RobotoSlab";
+		// line-height: calc(40 / 30);
+		@include resp-font(30, 18);
+		margin: 0px 0px 70px 0px;
+
+		@media (max-width: $md3+px) {
+			margin: 0px 0px 35px 0px;
+		}
+
+		@media (max-width: 580px) {
+			margin: 40px 0px 25px 0px;
+		}
+	}
+
+	// .support__info
+	&__info {}
+
+	.callback_decor {
+		@media (min-width: 670px) {
+			background: url("../../dist/img/form-image-02.jpg") right -2% bottom no-repeat #ffffff;
+		}
+	}
+
+}
+
+.info-support {
+	max-width: 400px;
+
+	// .info-support__text
+	&__text {
+		@include resp-font(20, 16);
+		font-weight: 400;
+	}
+
+	// .info-support__label
+	&__label {
+		@include resp-font(22, 18);
+		font-weight: 700;
+		margin: 68px 0px 26px 0px;
+
+		@media (max-width: $md3+px) {
+			margin: 35px 0px 15px 0px;
+		}
+	}
+}
+
+
+
+
 
 
 //</ОСНОВНОЙ БЛОК>===========================================================================================================
