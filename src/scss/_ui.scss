@@ -20,6 +20,9 @@
 
 	&_mxw {
 		max-width: 450px;
+		.title__main {
+			text-align: left;
+		}
 	}
 }
 
@@ -267,6 +270,7 @@ body.ie .ibg img {
 		position: relative;
 		overflow: hidden;
 		width: 100%;
+
 	}
 
 	.slick-track {
@@ -280,6 +284,7 @@ body.ie .ibg img {
 		overflow: hidden;
 		float: left;
 		position: relative;
+	
 	}
 
 	.slick-dots {

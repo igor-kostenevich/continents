@@ -1509,16 +1509,36 @@ function preventDefaultForScrollKeys(e) {
 		  return false;
 	}*/
 }
-$('.main-slider__body').slick({
+$('.gallery-offer__body').slick({
 	lazyLoad: 'ondemand',
 	dots: false,
 	arrows: true,
 	infinite: true,
 	speed: 600,
-	prevArrow: '.control-main-slider__arrow_prev',
-	nextArrow: '.control-main-slider__arrow_next',
-	slidesToShow: 1,
-    slidesToScroll: 1
+	prevArrow: '.gallery-offer__arrow_prev',
+	nextArrow: '.gallery-offer__arrow_next',
+	slidesToShow: 4,
+	slidesToScroll: 1,
+	responsive: [
+		{
+		  breakpoint: 768,
+		  settings: {
+			slidesToShow: 3,
+		  }
+		},
+		{
+			breakpoint: 630,
+			settings: {
+			  slidesToShow: 2,
+			}
+		  },
+		{
+		  breakpoint: 485,
+		  settings: {
+			slidesToShow: 1,
+		  }
+		}
+	  ]
   });
 
   $('.slider-lots__body').slick({

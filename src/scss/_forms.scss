@@ -21,6 +21,14 @@
 // Callback form
 
 .callback {
+	text-align: center;
+
+	// .callback__title
+	&__title {
+		@include resp-font(22, 18);
+		font-weight: 700;
+		margin: 0px 0px 30px 0px;
+	}
 
 
 	// .callback__text
@@ -32,13 +40,16 @@
 
 	.form-callback {
 		display: flex;
+		justify-content: center;
 		margin: 40px 0px 0px 0px;
+
 		&__name {
 			background: url("../../dist/img/icons/user-icon.png") 10% 50% no-repeat #ffffff;
 		}
+
 		&__tel {
 			background: url("../../dist/img/icons/phone-icon.png") 10% 50% no-repeat #ffffff;
-		 }
+		}
 
 		// .form-callback__button
 		&__button {
@@ -49,17 +60,20 @@
 			font-size: 12px;
 			font-weight: 700;
 			text-transform: uppercase;
-			@media (max-width: $md2+px){
+
+			@media (max-width: $md2+px) {
 				padding: 20px 22px 20px 22px;
 			}
-			@media (min-width: 992px){
+
+			@media (min-width: 992px) {
 				&:hover {
 					background-color: $decor-bg-hover;
 					transition: all .1s linear 0s;
 				}
 			}
 		}
-		@media (max-width: $md3+px){
+
+		@media (max-width: $md3+px) {
 			display: inline-block;
 		}
 	}
@@ -79,7 +93,8 @@
 			padding: 2px 0px 2px 45px;
 			margin: 0px 0px 0px 30px;
 			background: url("../../dist/img/icons/mobile-phone_icon.png") left no-repeat;
-			@media (max-width: $md3+px){
+
+			@media (max-width: $md3+px) {
 				margin: 15px 0px 0px 0px;
 				display: block;
 				text-align: left;
@@ -87,7 +102,20 @@
 		}
 	}
 
-	@media (max-width: $md3+px){
+	&_decor {
+		border: 10px solid $tabs-bg;
+		padding: 70px 10px;
+		background: #fff;
+
+		@media (min-width: 670px){
+			background: url("../../dist/img/form-image-01.jpg") right -2% bottom no-repeat #ffffff;
+		}
+		@media (max-width: $md4+px){
+		  padding: 35px 10px;
+		}
+	}
+
+	@media (max-width: $md3+px) {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -107,9 +135,9 @@
 	text-transform: uppercase;
 	padding: 22px 30px 15px;
 
-		@media (max-width: $md4+px) {
-			padding: 12px 12px 8px 12px;
-		}
+	@media (max-width: $md4+px) {
+		padding: 12px 12px 8px 12px;
+	}
 
 	@media (min-width: 992px) {
 		&:hover {
@@ -239,11 +267,13 @@ textarea {
 	font-weight: 300;
 	color: #999999;
 	margin: 0px 30px 0px 0px;
-	@media (max-width: $md2+px){
+
+	@media (max-width: $md2+px) {
 		padding: 20px 5px 20px 50px;
 		margin: 0px 15px 0px 0px;
 	}
-	@media (max-width: $md3+px){
+
+	@media (max-width: $md3+px) {
 		margin: 0px 0px 15px 0px;
 	}
 

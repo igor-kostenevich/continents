@@ -239,7 +239,8 @@ body._lock {
 		height: 10px;
 		width: 100%;
 		background: url("../../dist/img/consultation-decor.svg") center no-repeat;
-		@media (max-width: $md4+px){
+
+		@media (max-width: $md4+px) {
 			margin: 40px 0px;
 		}
 	}
@@ -265,7 +266,8 @@ body._lock {
 	// .catalog__vouchers
 	&__vouchers {
 		margin: 70px 0px 0px 0px;
-		@media (max-width: $md4+px){
+
+		@media (max-width: $md4+px) {
 			margin: 40px 0px 0px 0px;
 		}
 	}
@@ -289,10 +291,12 @@ body._lock {
 		flex: 0 1 33.333%;
 		padding: 0 15px;
 		margin: 0px 0px 30px 0px;
-		@media (max-width: $md3+px){
+
+		@media (max-width: $md3+px) {
 			flex: 0 1 50%;
 		}
-		@media (max-width: $md4+px){
+
+		@media (max-width: $md4+px) {
 			flex: 0 1 100%;
 		}
 	}
@@ -304,10 +308,12 @@ body._lock {
 		align-items: center;
 		flex-direction: column;
 	}
-	@media (max-width: $md3+px){
+
+	@media (max-width: $md3+px) {
 		padding: 45px 0;
 	}
-	@media (max-width: $md4+px){
+
+	@media (max-width: $md4+px) {
 		padding: 25px 0;
 	}
 }
@@ -330,19 +336,22 @@ body._lock {
 			background-color: $decor-bg;
 			width: calc(100% - 30px);
 			margin: 0 15px;
-			@media (max-width: $md3+px){
+
+			@media (max-width: $md3+px) {
 				width: calc(100% - 14px);
 				margin: 0 7px;
 			}
-			@media (max-width: $md4+px){
+
+			@media (max-width: $md4+px) {
 				display: none;
 			}
 		}
 
-		@media (max-width: $md3+px){
+		@media (max-width: $md3+px) {
 			margin: 0 -7px;
 		}
-		@media (max-width: $md4+px){
+
+		@media (max-width: $md4+px) {
 			display: block;
 		}
 	}
@@ -355,10 +364,12 @@ body._lock {
 		&.active .category__items {
 			background-color: $decor-bg;
 		}
-		@media (max-width: $md3+px){
+
+		@media (max-width: $md3+px) {
 			padding: 0px 7px;
 		}
-		@media (max-width: $md4+px){
+
+		@media (max-width: $md4+px) {
 			margin: 10px 0px 0px 0px;
 		}
 	}
@@ -373,7 +384,8 @@ body._lock {
 		border-radius: 20px 20px 0 0;
 		background-color: $tabs-bg;
 		cursor: pointer;
-		@media (max-width: $md4+px){
+
+		@media (max-width: $md4+px) {
 			border-radius: 0px 0px 0px 0px;
 		}
 	}
@@ -386,10 +398,11 @@ body._lock {
 		text-align: center;
 		line-height: calc(22 / 18);
 
-		@media (max-width: $md3+px){
+		@media (max-width: $md3+px) {
 			padding: calc(28/370 * 100%) calc(25/320 * 100%);
 		}
-		@media (max-width: $md4+px){
+
+		@media (max-width: $md4+px) {
 			padding: calc(18/370 * 100%) calc(5/320 * 100%);
 		}
 	}
@@ -445,7 +458,7 @@ body._lock {
 				margin: 0px 0px 10px 0px;
 				height: 20px;
 			}
-			
+
 		}
 	}
 
@@ -512,8 +525,124 @@ body._lock {
 	}
 }
 
+// Offer
 
+.offer {
+	padding: 100px/1170px * 100% 0px;
+	background: linear-gradient(-211deg, $tabs-bg 0%, #fdfde0 100%);
 
+	// .offer__title 
+	&__title {
+		margin: 0 auto;
+
+		.title__item {
+			max-width: 630px;
+			line-height: calc(41 / 22);
+			text-align: center;
+			margin: 30px auto 0;
+
+			span {
+				background-color: $decor-bg;
+				padding: 3px 10px;
+				color: #ffffff;
+			}
+		}
+	}
+
+	// .offer__info
+	.offer__info {
+		margin: 70px 0px 40px 0;
+		@media (max-width: $md3+px){
+			margin: 40px 0px 20px 0px;
+		}
+	}
+
+	.info-offer {
+
+		// .info-offer__row
+		&__row {
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		// .info-offer__column
+		&__column {
+			display: flex;
+			flex: 0 1 33.333%;
+			justify-content: center;
+			align-items: center;
+			margin: 0px 0px 30px 0px;
+
+			@media (max-width: $md2+px) {
+				flex: 0 1 50%;
+			}
+
+			@media (max-width: $md3+px) {
+				flex: 0 1 100%;
+				justify-content: flex-start;
+			}
+		}
+
+		// .info-offer__image
+		&__image {
+			margin: 0px 30px 0px 15px;
+		}
+
+		// .info-offer__item
+		&__item {
+			font-size: 20px;
+			max-width: 220px;
+
+			@media (max-width: $md3+px) {
+				max-width: none;
+				font-size: 18px;
+			}
+
+			// padding: 0px 80px 0px 0px;
+		}
+	}
+}
+
+.gallery-offer {
+	position: relative;
+	margin: 70px 0px 0px 0px;
+
+	// .gallery-offer__body
+	&__body {
+		margin: 0 -15px;
+	}
+
+	// .gallery-offer__slide
+	&__slide {
+		height: 200px;
+		margin: 0 15px;
+	}
+
+	// .gallery-offer__control
+	&__control {}
+
+	// .gallery-offer__arrow
+	&__arrow {
+		position: absolute;
+		top: 50%;
+		cursor: pointer;
+		height: 40px;
+		width: 40px;
+		background: url("../../dist/img/icons/arrow-icon.svg") center no-repeat rgba(255, 255, 255, 0.507);
+
+		// .gallery-offer__arrow_prev
+		&_prev {
+			left: 20px;
+			transform: translate(0, -50%);
+		}
+
+		// .gallery-offer__arrow_next
+		&_next {
+			transform: translate(0px, -50%) rotate(180deg);
+			right: 20px;
+		}
+	}
+}
 
 
 //</ОСНОВНОЙ БЛОК>===========================================================================================================
