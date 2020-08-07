@@ -7,7 +7,7 @@
 	&__main {
 		color: #00222d;
 		font-family: "RobotoSlab";
-		line-height: calc(40 / 30);
+		line-height: calc(36 / 30);
 		@include resp-font(30, 20);
 	}
 
