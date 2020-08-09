@@ -310,7 +310,7 @@ body._lock {
 	}
 
 	@media (max-width: $md3+px) {
-		padding: 45px 0;
+		padding: 50px 0;
 	}
 
 	@media (max-width: $md4+px) {
@@ -528,7 +528,7 @@ body._lock {
 // Offer
 
 .offer {
-	padding: 100px/1170px * 100% 0px;
+	padding: 100px 0px;
 	background: linear-gradient(-211deg, $tabs-bg 0%, #fdfde0 100%);
 
 	// .offer__title 
@@ -602,6 +602,10 @@ body._lock {
 			// padding: 0px 80px 0px 0px;
 		}
 	}
+
+	@media (max-width: $md3+px) {
+		padding: 50px 0px;
+	}
 }
 
 .gallery-offer {
@@ -648,10 +652,7 @@ body._lock {
 // Suport 
 
 .support {
-	padding: 100px/1170px * 100% 0px;
-
-	// .support__container
-	&__container {}
+	padding: 100px 0px;
 
 	// .support__row
 	&__row {
@@ -685,7 +686,7 @@ body._lock {
 		@include resp-font(30, 18);
 		margin: 0px 0px 70px 0px;
 
-		@media (max-width: $md3+px) {
+		@media (max-width: $md2+px) {
 			margin: 0px 0px 35px 0px;
 		}
 
@@ -694,15 +695,15 @@ body._lock {
 		}
 	}
 
-	// .support__info
-	&__info {}
-
 	.callback_decor {
 		@media (min-width: 670px) {
 			background: url("../../dist/img/form-image-02.jpg") right -2% bottom no-repeat #ffffff;
 		}
 	}
 
+	@media (max-width: $md3+px) {
+		padding: 50px 0px;
+	}
 }
 
 .info-support {
@@ -720,6 +721,10 @@ body._lock {
 		font-weight: 700;
 		margin: 68px 0px 26px 0px;
 
+		@media (max-width: $md2+px) {
+			margin: 45px 0px 26px 0px;
+		}
+
 		@media (max-width: $md3+px) {
 			margin: 35px 0px 15px 0px;
 		}
@@ -729,7 +734,7 @@ body._lock {
 // Condition 
 
 .condition {
-	padding: 100px/1170px * 100% 0px 25px/1170px * 100% 0px;
+	padding: 100px 0px 20px;
 	background: linear-gradient(-211deg, $tabs-bg 0%, #fdfde0 100%);
 
 	// .condition__title
@@ -744,6 +749,10 @@ body._lock {
 		display: flex;
 		margin: 100px -25px 0px -25px;
 		flex-wrap: wrap;
+
+		@media (max-width: $md3+px) {
+			margin: 70px -25px 0px -25px;
+		}
 
 		@media (max-width: $md4+px) {
 			margin: 50px -25px 0px -25px;
@@ -770,6 +779,10 @@ body._lock {
 			display: block;
 			text-align: center;
 		}
+	}
+
+	@media (max-width: $md3+px) {
+		padding: 50px 0px 20px;
 	}
 }
 
@@ -811,7 +824,7 @@ body._lock {
 // About 
 
 .about {
-	padding: 100px/1170px * 100% 0px 60px/1170px * 100% 0px;
+	padding: 100px 0px 60px;
 
 	// .about__container
 	&__container {}
@@ -853,6 +866,10 @@ body._lock {
 	&__team {
 		max-width: 870px;
 		margin: 70px auto 0px auto;
+	}
+
+	@media (max-width: $md3+px) {
+		padding: 50px 0px 30px;
 	}
 }
 
@@ -975,7 +992,7 @@ body._lock {
 // education
 
 .education {
-	padding: 100px/1170px * 100% 0px;
+	padding: 100px 0px 60px;
 	background: linear-gradient(-211deg, $tabs-bg 0%, #fdfde0 100%);
 
 	// .education__container
@@ -1002,7 +1019,8 @@ body._lock {
 		font-size: 22px;
 		text-align: center;
 		margin: 50px 0px;
-		@media (max-width: $md4+px){
+
+		@media (max-width: $md4+px) {
 			margin: 40px 0px 25px 0px;
 		}
 	}
@@ -1012,8 +1030,9 @@ body._lock {
 		display: flex;
 		margin: 0px -41px;
 		flex-wrap: wrap;
-		@media (max-width: $md2+px){
-		   justify-content: center;
+
+		@media (max-width: $md2+px) {
+			justify-content: center;
 		}
 	}
 
@@ -1023,6 +1042,7 @@ body._lock {
 		padding: 0px 40px;
 		position: relative;
 		margin: 0px 0px 40px 0px;
+
 		&:after {
 			content: '';
 			background: url("../../dist/img/icons/right-drawn-arrow-icon.png") center no-repeat;
@@ -1033,17 +1053,23 @@ body._lock {
 			top: 24%;
 			right: 0;
 			transform: translate(50%, 0px);
-			
 		}
+
 		&:last-child:after {
 			background: none !important;
 		}
-		@media (max-width: $md2+px){
-		   flex: 0 0 50%;
+
+		@media (max-width: $md2+px) {
+			flex: 0 0 50%;
 		}
-		@media (max-width: $md4+px){
+
+		@media (max-width: $md4+px) {
 			flex: 0 0 100%;
-		}	
+		}
+	}
+
+	@media (max-width: $md3+px) {
+		padding: 50px 0px 10px;
 	}
 }
 
@@ -1057,7 +1083,8 @@ body._lock {
 		font-size: 15px;
 		font-weight: 300;
 		margin: 0px 0px 25px 0px;
-		@media (max-width: $md4+px){
+
+		@media (max-width: $md4+px) {
 			margin: 0px 0px 15px 0px;
 		}
 	}
@@ -1065,7 +1092,8 @@ body._lock {
 	// .box-education__image
 	&__image {
 		margin: 0px 0px 35px 0px;
-		@media (max-width: $md4+px){
+
+		@media (max-width: $md4+px) {
 			margin: 0px 0px 25px 0px;
 		}
 	}
@@ -1077,7 +1105,8 @@ body._lock {
 		line-height: 27px;
 		margin: 0px 0px 15px 0px;
 		text-align: center;
-		@media (max-width: $md4+px){
+
+		@media (max-width: $md4+px) {
 			margin: 0px 0px 15px 0px;
 		}
 	}
@@ -1089,10 +1118,125 @@ body._lock {
 			font-weight: 300;
 			text-align: center;
 			margin: 0px 0px 15px 0px;
-			@media (max-width: $md4+px){
+
+			@media (max-width: $md4+px) {
 				margin: 0px 0px 10px 0px;
 			}
 		}
+	}
+}
+
+// gallery-items
+
+.gallery-items {
+	display: flex;
+
+	@media (max-width: $md3+px) {
+		flex-wrap: wrap;
+	}
+
+	// .gallery-items__item
+	&__item {
+		padding: 0px 0px 16.67% 0px;
+		width: 100%;
+
+		@media (max-width: $md3+px) {
+			flex: 1 0 33.333%;
+			padding: 0px 0px 31.67% 0px;
+		}
+	}
+}
+
+// steps
+
+.steps {
+	padding: 100px 0px 20px;
+	background: url("../../dist/img/decor-img-steps.png") bottom no-repeat;
+	max-width: 970px;
+	margin: 0px auto;
+
+	// .steps__title
+	&__title {
+		margin: 0px 0px 105px 0px;
+		@media (max-width: $md4+px){
+		   margin: 0px 0px 50px 0px;
+		}
+	}
+
+	// .steps__container
+	&__container {}
+
+	// .steps__wrapp
+	&__wrapp {
+		overflow: hidden;
+	}
+
+	// .steps__row
+	&__row {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0px -50px;
+	}
+
+	// .steps__column
+	&__column {
+		flex: 0 0 33.333%;
+		padding: 0px 50px;
+		margin: 0px 0px 80px 0px;
+		position: relative;
+
+		&:after {
+			content: '';
+			background: url("../../dist/img/icons/right-drawn-arrow-icon.png") center no-repeat;
+			display: block;
+			width: 64px;
+			height: 24px;
+			position: absolute;
+			top: 19%;
+			right: 0;
+			transform: translate(50%, 0px);
+		}
+
+		@media (max-width: $md3+px){
+		   flex: 0 0 50%;
+		}
+		@media (max-width: $md4+px){
+		   flex: 0 0 100%;
+		   margin: 0px 0px 50px 0px;
+		}
+	}
+
+	@media (max-width: $md3+px) {
+		padding: 50px 0px 10px;
+	}
+}
+
+.steps-item {}
+
+.item-steps {
+	text-align: center;
+	// .item-steps__image
+	&__image {
+		margin: 0px 0px 30px 0px;
+	}
+
+	// .item-steps__info
+	&__info {
+		margin: 0px auto;
+		font-size: 16px;
+		line-height: calc(22 / 16);
+	}
+
+	// .item-steps__btn
+	&__btn {
+		font-size: 16px;
+		color: #001e28;
+		font-family: "Circe";
+		font-weight: 700;
+		border-bottom: 4px solid $decor-bg;
+		line-height: 27px;
+		display: inline-flex;
+		margin: 10px 0px 0px 0px;
 	}
 }
 
