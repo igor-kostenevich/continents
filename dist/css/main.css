@@ -1725,6 +1725,112 @@ body._lock {
   line-height: 20px;
 }
 
+.education {
+  padding: 8.54701% 0px;
+  background: -o-linear-gradient(301deg, #d8f0f0 0%, #fdfde0 100%);
+  background: linear-gradient(-211deg, #d8f0f0 0%, #fdfde0 100%);
+}
+
+.education__container {
+  overflow: hidden;
+  padding: 0 10px;
+}
+
+.education__title {
+  max-width: 810px;
+  margin: 0px auto;
+}
+
+.education__title .title__item {
+  margin: 30px auto 0;
+  max-width: 533px;
+}
+
+.education__label {
+  font-weight: 700;
+  line-height: 27px;
+  font-size: 22px;
+  text-align: center;
+  margin: 50px 0px;
+}
+
+.education__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0px -41px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.education__column {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 25%;
+          flex: 0 0 25%;
+  padding: 0px 40px;
+  position: relative;
+  margin: 0px 0px 40px 0px;
+}
+
+.education__column:after {
+  content: '';
+  background: url("../../dist/img/icons/right-drawn-arrow-icon.png") center no-repeat;
+  display: block;
+  width: 64px;
+  height: 24px;
+  position: absolute;
+  top: 24%;
+  right: 0;
+  -webkit-transform: translate(50%, 0px);
+      -ms-transform: translate(50%, 0px);
+          transform: translate(50%, 0px);
+}
+
+.education__column:last-child:after {
+  background: none !important;
+}
+
+.box-education {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.box-education__numbering {
+  font-size: 15px;
+  font-weight: 300;
+  margin: 0px 0px 25px 0px;
+}
+
+.box-education__image {
+  margin: 0px 0px 35px 0px;
+}
+
+.box-education__title {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 27px;
+  margin: 0px 0px 15px 0px;
+  text-align: center;
+}
+
+.box-education__text p {
+  font-size: 15px;
+  font-weight: 300;
+  text-align: center;
+  margin: 0px 0px 15px 0px;
+}
+
 @media (min-width: 670px) {
   .callback_decor {
     background: url("../../dist/img/form-image-01.jpg") right -2% bottom no-repeat #ffffff;
@@ -1835,11 +1941,27 @@ body._lock {
     margin: 0px 0px 0px 20px;
   }
 
+  .info-about__descr {
+    margin: 0px 0px 35px 0px;
+  }
+
   .team__item {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 50%;
             flex: 0 0 50%;
     margin: 0px 0px 30px 0px;
+  }
+
+  .education__row {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .education__column {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
   }
 }
 
@@ -1968,10 +2090,6 @@ body._lock {
 
   .info-about__title {
     margin: 30px 0px;
-  }
-
-  .info-about__descr {
-    margin: 0px 0px 35px 0px;
   }
 
   .info-about {
@@ -2168,6 +2286,32 @@ body._lock {
   .info-about__list li {
     padding: 0px 0px 0px 35px;
   }
+
+  .education__label {
+    margin: 40px 0px 25px 0px;
+  }
+
+  .education__column {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+  }
+
+  .box-education__numbering {
+    margin: 0px 0px 15px 0px;
+  }
+
+  .box-education__image {
+    margin: 0px 0px 25px 0px;
+  }
+
+  .box-education__title {
+    margin: 0px 0px 15px 0px;
+  }
+
+  .box-education__text p {
+    margin: 0px 0px 10px 0px;
+  }
 }
 
 .webp .callback .form-callback__name{ background: url(../../dist/img/icons/user-icon.webp) 10% 50% no-repeat #ffffff; }
@@ -2189,6 +2333,8 @@ body._lock {
 .webp .card-box__image .image-box__info-age{ background: url(../../dist/img/icons/age-icon.webp) no-repeat; }
 
 .webp .info-about__list li{ background: url(../../dist/img/icons/check-icon.webp) no-repeat; }
+
+.webp .education__column:after{ background: url(../../dist/img/icons/right-drawn-arrow-icon.webp) center no-repeat; }
 
 @media (min-width: 670px){
 
