@@ -220,7 +220,7 @@ body._lock {
 // consultation ====================================================================================
 
 .consultation {
-	padding: 100px 0 100px 0;
+	padding: 100px 0;
 	background: url("../../dist/img/consultation-bg.jpg") 50% 0% no-repeat;
 
 	// .consultation__container
@@ -241,7 +241,7 @@ body._lock {
 		background: url("../../dist/img/consultation-decor.svg") center no-repeat;
 
 		@media (max-width: $md4+px) {
-			margin: 40px 0px;
+			margin: 40px 0px 20px;
 		}
 	}
 
@@ -860,6 +860,10 @@ body._lock {
 	// .about__info
 	&__info {
 		margin: 0px 0px 0px 34px;
+
+		@media (max-width: $md3+px) {
+			margin: 0px 0px 0px 0px;
+		}
 	}
 
 	// .about__team
@@ -1158,8 +1162,9 @@ body._lock {
 	// .steps__title
 	&__title {
 		margin: 0px 0px 105px 0px;
-		@media (max-width: $md4+px){
-		   margin: 0px 0px 50px 0px;
+
+		@media (max-width: $md4+px) {
+			margin: 0px 0px 50px 0px;
 		}
 	}
 
@@ -1197,12 +1202,13 @@ body._lock {
 			transform: translate(50%, 0px);
 		}
 
-		@media (max-width: $md3+px){
-		   flex: 0 0 50%;
+		@media (max-width: $md3+px) {
+			flex: 0 0 50%;
 		}
-		@media (max-width: $md4+px){
-		   flex: 0 0 100%;
-		   margin: 0px 0px 50px 0px;
+
+		@media (max-width: $md4+px) {
+			flex: 0 0 100%;
+			margin: 0px 0px 50px 0px;
 		}
 	}
 
@@ -1215,6 +1221,7 @@ body._lock {
 
 .item-steps {
 	text-align: center;
+
 	// .item-steps__image
 	&__image {
 		margin: 0px 0px 30px 0px;
@@ -1239,6 +1246,68 @@ body._lock {
 		margin: 10px 0px 0px 0px;
 	}
 }
+
+// license 
+
+.license {
+	padding: 100px 0px 40px;
+	background: linear-gradient(-211deg, #d8f0f0 0%, #fdfde0 100%);
+
+	// .license__container
+	&__container {}
+
+	// .license__title
+	&__title {
+		max-width: 775px;
+		width: 100%;
+		margin: 0px auto 100px auto;
+
+		@media (max-width: $md3+px) {
+			margin: 0px auto 50px auto;
+		}
+	}
+
+	// .license__body
+	&__body {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	// .license__item
+	&__item {
+		flex: 0 0 270px;
+		margin: 0px 40px 40px;
+		@media (max-width: $md3+px){
+			margin: 0px 20px 40px;
+		}
+		@media (max-width: $md3+px){
+			margin: 0px 0px 30px;
+		}
+	}
+
+	// .license__image
+	&__image {
+		border: 15px solid #cce9e6;
+		height: 350px;
+		margin: 0px 0px 30px 0px;
+		@media (max-width: $md4+px){
+			margin: 0px 0px 15px 0px;
+		}
+	}
+
+	// .license__name
+	&__name {
+		font-size: 18px;
+		font-weight: 400;
+		text-align: center;
+	}
+
+	@media (max-width: $md3+px) {
+		padding: 50px 0px 30px;
+	}
+}
+
 
 
 
