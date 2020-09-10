@@ -10,11 +10,13 @@
 		line-height: calc(36 / 30);
 		// @include resp-font(30, 20);
 		font-size: 30px;
-		@media (max-width: $md3+px){
-		   font-size: 26px;
+
+		@media (max-width: $md3+px) {
+			font-size: 26px;
 		}
-		@media (max-width: $md4+px){
-		   font-size: 20px;
+
+		@media (max-width: $md4+px) {
+			font-size: 20px;
 		}
 	}
 
@@ -24,8 +26,9 @@
 		font-weight: 700;
 		// @include resp-font(22, 18);
 		font-size: 22px;
-		@media (max-width: $md4+px){
-		   font-size: 18px;
+
+		@media (max-width: $md4+px) {
+			font-size: 18px;
 		}
 	}
 
@@ -40,6 +43,7 @@
 
 // =======================================
 .slider-box {
+
 	// .slider-box__image
 	&__image {
 		width: 100%;
@@ -76,7 +80,6 @@
 }
 
 
-
 //</ОСНОВНОЙ БЛОК>====================================================================================================
 
 
@@ -90,6 +93,41 @@
 
 .rub:after {
 	content: '₽';
+}
+
+//====================================================================================================
+
+#back-top {
+	position: fixed;
+	bottom: 10%;
+	z-index: 100;
+	right: 20px;
+
+	a {
+		width: 50px;
+		height: 50px;
+		background-color: $decor-bg;
+		border-radius: 50%;
+		display: block;
+		transition: 1s;
+		opacity: .8;
+
+		@media (min-width: 992px) {
+			&:hover {
+				opacity: 1;
+				background-color: $decor-bg-hover;
+			}
+		}
+	}
+
+	span {
+		width: 50px;
+		height: 50px;
+		display: block;
+		background: url("../../dist/img/icons/up-arrow.png") center no-repeat;
+		transition: 1s;
+		opacity: 0.7;
+	}
 }
 
 //====================================================================================================

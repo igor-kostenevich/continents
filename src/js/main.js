@@ -32,13 +32,13 @@ if (isIE()) {
 
 function ibg() {
 	// if (isIE()) {
-		var ibg = document.querySelectorAll(".ibg");
+	var ibg = document.querySelectorAll(".ibg");
 
-		for (var i = 0; i < ibg.length; i++) {
-			if (ibg[i].querySelector('img') && ibg[i].querySelector('img').getAttribute('src') != null) {
-				ibg[i].style.backgroundImage = 'url(' + ibg[i].querySelector('img').getAttribute('src') + ')';
-			}
+	for (var i = 0; i < ibg.length; i++) {
+		if (ibg[i].querySelector('img') && ibg[i].querySelector('img').getAttribute('src') != null) {
+			ibg[i].style.backgroundImage = 'url(' + ibg[i].querySelector('img').getAttribute('src') + ')';
 		}
+	}
 	// }
 }
 ibg();
@@ -262,18 +262,22 @@ $(document).on('click touchstart', function (e) {
 
 
 //UP
-$(window).scroll(function () {
-	var w = $(window).width();
-	if ($(window).scrollTop() > 50) {
-		$('#up').fadeIn(300);
-	} else {
-		$('#up').fadeOut(300);
-	}
-});
-$('#up').click(function (event) {
-	$('body,html').animate({
-		scrollTop: 0
-	}, 300);
+$("#back-top").hide();
+
+$(function () {
+	$(window).scroll(function () {
+		if ($(this).scrollTop() > 100) {
+			$('#back-top').fadeIn();
+		} else {
+			$('#back-top').fadeOut();
+		}
+	});
+	$('#back-top a').click(function () {
+		$('body,html').animate({
+			scrollTop: 0
+		}, 800);
+		return false;
+	});
 });
 
 //ZOOM

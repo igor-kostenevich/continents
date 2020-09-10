@@ -97,7 +97,7 @@
 			padding: 2px 0px 2px 45px;
 			margin: 0px 0px 0px 30px;
 			background: url("../../dist/img/icons/mobile-phone_icon.png") left no-repeat;
-
+			transition: color 0.5s ease 0s;
 			@media (max-width: $md3+px) {
 				margin: 15px 0px 0px 0px;
 				display: block;

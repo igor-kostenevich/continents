@@ -1,11 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     @@include('./template/_head.html', {"title" : "Главная"})
 </head>
 
-<body>
+<body id="top">
+    
+    <p id="back-top">
+        <a href="#top"><span></span></a>
+    </p>
+
     <div class="wrapper">
         @@include('./template/_header.html')
 
@@ -536,16 +541,6 @@
                                     <div class="team__text">Руководитель "Школы вожатского мастерства"</div>
                                 </div>
                             </div>
-                            <!-- <div class="team__item">
-                                <div class="team__image">
-                                    <img src="./dist/img/team-img-03.png" alt="">
-                                </div>
-                                <div class="team__info">
-                                    <div class="team__name">Светлана Бедрицкая</div>
-                                    <div class="team__text">Руководитель "Школы вожатского мастерства"</div>
-                                </div>
-                            </div> -->
-
                         </div>
                     </div>
                 </div>
@@ -659,7 +654,7 @@
                                         <img src="./dist/img/step-img-01.png" alt="">
                                     </div>
                                     <div class="item-steps__info">Вы оставляете заявку на сайте</div>
-                                    <a href="" class="item-steps__btn">Оставить заявку</a>
+                                    <a href="#callback" class="item-steps__btn pl">Оставить заявку</a>
                                 </div>
                             </div>
                             <div class="steps__column">
@@ -794,12 +789,14 @@
                                         </div>
                                     </div>
                                 </div>
-                    
+
                             </div>
                         </div>
                         <div class="slider-reviews__conrol">
-                            <div class="slider-reviews__arrow slider-reviews__arrow_prev federal-slider-arrow_prev"></div>
-                            <div class="slider-reviews__arrow slider-reviews__arrow_next federal-slider-arrow_next"></div>
+                            <div class="slider-reviews__arrow slider-reviews__arrow_prev federal-slider-arrow_prev">
+                            </div>
+                            <div class="slider-reviews__arrow slider-reviews__arrow_next federal-slider-arrow_next">
+                            </div>
                         </div>
                     </div>
                     <div class="reviews__title title">
@@ -851,27 +848,30 @@
                                         </div>
                                     </div>
                                 </div>
-                    
+
                             </div>
                         </div>
                         <div class="slider-reviews__conrol">
-                            <div class="slider-reviews__arrow slider-reviews__arrow_prev parents-slider-arrow_prev"></div>
-                            <div class="slider-reviews__arrow slider-reviews__arrow_next parents-slider-arrow_next"></div>
+                            <div class="slider-reviews__arrow slider-reviews__arrow_prev parents-slider-arrow_prev">
+                            </div>
+                            <div class="slider-reviews__arrow slider-reviews__arrow_next parents-slider-arrow_next">
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
-
-
         </main>
 
         @@include('./template/_footer.html')
+
+        @@include('./template/_popup.html')
     </div>
 
     <script src="./dist/js/libs/jquery-3.4.1.min.js"></script>
     <!-- <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script> -->
     <!-- <script src="/dist/js/libs/jquery.nicescroll.min.js"></script> -->
-    <!-- <script src="https://maps.google.com/maps/api/js?sensor=false&amp;key="></script> -->
+    <script src="https://maps.google.com/maps/api/js?sensor=false&amp;key=AIzaSyC7zimSzASZomtEtWm25X-mpjxeqJ5tKLg">
+    </script>
     <script src="./dist/js/libs/jquery.inputmask.bundle.min.js"></script>
     <script src="./dist/js/libs/smooth-scroll.min.js"></script>
     <script src="./dist/js/libs/slick.min.js"></script>

@@ -164,6 +164,36 @@ h6 {
   content: '₽';
 }
 
+#back-top {
+  position: fixed;
+  bottom: 10%;
+  z-index: 100;
+  right: 20px;
+}
+
+#back-top a {
+  width: 50px;
+  height: 50px;
+  background-color: #ffaf02;
+  border-radius: 50%;
+  display: block;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+  opacity: .8;
+}
+
+#back-top span {
+  width: 50px;
+  height: 50px;
+  display: block;
+  background: url("../../dist/img/icons/up-arrow.png") center no-repeat;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+  opacity: 0.7;
+}
+
 .noselect {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -518,6 +548,9 @@ body.ie .ibg img {
   padding: 2px 0px 2px 45px;
   margin: 0px 0px 0px 30px;
   background: url("../../dist/img/icons/mobile-phone_icon.png") left no-repeat;
+  -webkit-transition: color 0.5s ease 0s;
+  -o-transition: color 0.5s ease 0s;
+  transition: color 0.5s ease 0s;
 }
 
 .callback_decor {
@@ -994,7 +1027,8 @@ textarea.input {
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
   position: relative;
-  max-width: 1230px;
+  padding: 30px 0px;
+  max-width: 900px;
   margin: 0px auto;
   background-color: #fff;
 }
@@ -1006,7 +1040,7 @@ textarea.input {
   top: 10px;
   right: 10px;
   cursor: pointer;
-  background: url("../../build/img/close.svg") no-repeat;
+  background: url("../../dist/img/icons/close.svg") no-repeat;
   background-size: contain;
 }
 
@@ -1162,6 +1196,9 @@ body._lock {
   font-family: "RobotoSlab";
   font-size: 17px;
   color: #001e28;
+  -webkit-transition: color .2s linear 0s;
+  -o-transition: color .2s linear 0s;
+  transition: color .2s linear 0s;
 }
 
 .main-screen {
@@ -2028,6 +2065,113 @@ body._lock {
   right: 0;
 }
 
+.contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contacts__column:first-child {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 45%;
+          flex: 0 0 45%;
+}
+
+.contacts__column:last-child {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 55%;
+          flex: 0 0 55%;
+}
+
+.contacts__map {
+  height: 100%;
+}
+
+.contacts-wrapp {
+  background-image: -o-linear-gradient(301deg, #d8f0f0 0%, #fdfde0 100%);
+  background-image: linear-gradient(-211deg, #d8f0f0 0%, #fdfde0 100%);
+}
+
+.contacts-content {
+  padding: 100px 10px 100px 100px;
+  max-width: 700px;
+}
+
+.contacts-content__title {
+  text-align: left;
+  margin: 0px 0px 85px 0px;
+}
+
+.contacts-content__address {
+  margin: 0px 0px 40px 0px;
+}
+
+.contacts-content__address p {
+  font-size: 20px;
+  line-height: calc(26 / 20);
+  font-style: normal;
+}
+
+.contacts-content__mode {
+  margin: 0px 0px 40px 0px;
+}
+
+.contacts-content__mode span {
+  color: #007ca5;
+  display: block;
+  font-size: 17px;
+  font-weight: 400;
+  font-family: 'Circe';
+  margin: 0px 0px 20px 0px;
+}
+
+.contacts-content__mode p {
+  font-size: 20px;
+}
+
+.contacts-content__tel {
+  margin: 0px 0px 40px 0px;
+}
+
+.contacts-content__tel span {
+  color: #007ca5;
+  font-size: 17px;
+  display: block;
+  margin: 0px 0px 20px 0px;
+}
+
+.contacts-content__tel a {
+  display: block;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: calc(26 / 20);
+  font-family: "Circe";
+  color: #001e28;
+  -webkit-transition: color 0.1s linear 0s;
+  -o-transition: color 0.1s linear 0s;
+  transition: color 0.1s linear 0s;
+}
+
+.contacts-content__label {
+  font-size: 20px;
+  margin: 0px 0px 20px 0px;
+  max-width: 350px;
+  line-height: calc(26 / 20);
+}
+
+.contacts-content__mail {
+  padding-bottom: 1px;
+  border-bottom: 1px solid #001e28;
+  font-size: 20px;
+  font-weight: 400;
+  color: #001e28;
+  font-family: "Circe";
+  display: inline-block;
+  -webkit-transition: all 0.1s linear 0s;
+  -o-transition: all 0.1s linear 0s;
+  transition: all 0.1s linear 0s;
+}
+
 @media (min-width: 670px) {
   .callback_decor {
     background: url("../../dist/img/form-image-01.jpg") right -2% bottom no-repeat #ffffff;
@@ -2069,6 +2213,11 @@ body._lock {
 }
 
 @media (min-width: 992px) {
+  #back-top a:hover {
+    opacity: 1;
+    background-color: #ff9d02;
+  }
+
   .callback .form-callback__button:hover {
     background-color: #ff9d02;
     -webkit-transition: all .1s linear 0s;
@@ -2092,13 +2241,28 @@ body._lock {
 
   .phone__item:hover {
     color: #ff9d02;
-    -webkit-transition: color .1s linear 0s;
-    -o-transition: color .1s linear 0s;
-    transition: color .1s linear 0s;
+    -webkit-transition: color .2s linear 0s;
+    -o-transition: color .2s linear 0s;
+    transition: color .2s linear 0s;
   }
 
   .card-box:hover {
     border: 2px solid #ffaf02;
+  }
+
+  .contacts-content__tel a:hover {
+    color: #ff9d02;
+    -webkit-transition: color 0.1s linear 0s;
+    -o-transition: color 0.1s linear 0s;
+    transition: color 0.1s linear 0s;
+  }
+
+  .contacts-content__mail:hover {
+    border-bottom: 1px solid #ff9d02;
+    color: #ff9d02;
+    -webkit-transition: all 0.1s linear 0s;
+    -o-transition: all 0.1s linear 0s;
+    transition: all 0.1s linear 0s;
   }
 }
 
@@ -2163,6 +2327,30 @@ body._lock {
 
   .slider-reviews__slide {
     margin: 0 30px;
+  }
+
+  .contacts-content__title {
+    margin: 0px 0px 50px 0px;
+  }
+
+  .contacts-content__title .title__main {
+    font-size: 26px;
+  }
+
+  .contacts-content__address {
+    margin: 0px 0px 30px 0px;
+  }
+
+  .contacts-content__mode {
+    margin: 0px 0px 30px 0px;
+  }
+
+  .contacts-content__tel {
+    margin: 0px 0px 30px 0px;
+  }
+
+  .contacts-content {
+    padding: 70px 10px 70px 50px;
   }
 }
 
@@ -2380,6 +2568,14 @@ body._lock {
 
   .slider-reviews__slide {
     margin: 0 30px;
+  }
+
+  .contacts__map {
+    height: 300px;
+  }
+
+  .contacts {
+    display: block;
   }
 }
 
@@ -2623,7 +2819,33 @@ body._lock {
   .reviews__title .title__item {
     margin: 50px 0px 25px;
   }
+
+  .contacts-content__title .title__main {
+    font-size: 20px;
+  }
+
+  .contacts-content__address p {
+    font-size: 16px;
+  }
+
+  .contacts-content__mode p {
+    font-size: 16px;
+  }
+
+  .contacts-content__tel a {
+    font-size: 16px;
+  }
+
+  .contacts-content__label {
+    font-size: 16px;
+  }
+
+  .contacts-content {
+    padding: 30px 10px 30px 15px;
+  }
 }
+
+.webp #back-top span{ background: url(../../dist/img/icons/up-arrow.webp) center no-repeat; }
 
 .webp .callback .form-callback__name{ background: url(../../dist/img/icons/user-icon.webp) 10% 50% no-repeat #ffffff; }
 

@@ -131,11 +131,12 @@ body._lock {
 		font-family: "RobotoSlab";
 		font-size: 17px;
 		color: $main-text-color;
+		transition: color .2s linear 0s;
 
 		@media (min-width: 992px) {
 			&:hover {
 				color: $decor-bg-hover;
-				transition: color .1s linear 0s;
+				transition: color .2s linear 0s;
 			}
 		}
 
@@ -1328,8 +1329,9 @@ body._lock {
 
 		.title__item {
 			margin: 60px 0px;
-			@media (max-width: $md4+px){
-			   margin: 50px 0px 25px;
+
+			@media (max-width: $md4+px) {
+				margin: 50px 0px 25px;
 			}
 		}
 	}
@@ -1355,23 +1357,26 @@ body._lock {
 	// .slider-reviews__slide
 	&__slide {
 		margin: 0 40px;
-		@media (max-width: $md2+px){
+
+		@media (max-width: $md2+px) {
 			margin: 0 30px;
 		}
-		@media (max-width: 890px){
+
+		@media (max-width: 890px) {
 			margin: 0 15px;
 		}
-		@media (max-width: $md3+px){
+
+		@media (max-width: $md3+px) {
 			margin: 0 30px;
 		}
-		@media (max-width: 600px){
+
+		@media (max-width: 600px) {
 			margin: 0 15px;
 		}
 	}
 
 	// .slider-reviews__conrol
-	&__conrol {
-	}
+	&__conrol {}
 
 	// .slider-reviews__arrow
 	&__arrow {
@@ -1401,9 +1406,168 @@ body._lock {
 }
 
 
+// footer
+.contacts {
+	display: flex;
 
+	// .contacts__column
+	&__column {
+		&:first-child {
+			flex: 0 0 45%;
+		}
+		&:last-child {
+			flex: 0 0 55%;
+		}
+	}
 
+	// .contacts__map
+	&__map {
+		height: 100%;
+		@media (max-width: $md3+px){
+		   height: 300px;
+		}
+	}
 
+	&-wrapp {
+		background-image: linear-gradient(-211deg, #d8f0f0 0%, #fdfde0 100%);
+	}
 
+	@media (max-width: $md3+px){
+	   display: block;
+	}
+}
+
+.contacts-content {
+	padding: 100px 10px 100px 100px;
+	max-width: 700px;
+
+	// .contacts-content__title
+	&__title {
+		text-align: left;
+		margin: 0px 0px 85px 0px;
+		@media (max-width: $md2+px){
+			margin: 0px 0px 50px 0px;
+		   .title__main {
+			   font-size: 26px;
+		   }
+		}
+		@media (max-width: $md4+px){
+			.title__main {
+				font-size: 20px;
+			}
+		}
+	}
+
+	// .contacts-content__address
+	&__address {
+		margin: 0px 0px 40px 0px;
+
+		p {
+			font-size: 20px;
+			line-height: calc(26 / 20);
+			font-style: normal;
+			@media (max-width: $md4+px){
+				font-size: 16px;
+			}
+		}
+		@media (max-width: $md2+px){
+			margin: 0px 0px 30px 0px;
+		}
+	}
+
+	// .contacts-content__mode
+	&__mode {
+		margin: 0px 0px 40px 0px;
+
+		span {
+			color: #007ca5;
+			display: block;
+			font-size: 17px;
+			font-weight: 400;
+			font-family: 'Circe';
+			margin: 0px 0px 20px 0px;
+		}
+
+		p {
+			font-size: 20px;
+			@media (max-width: $md4+px){
+				font-size: 16px;
+			}
+		}
+		@media (max-width: $md2+px){
+			margin: 0px 0px 30px 0px;
+		}
+	}
+
+	// .contacts-content__tel
+	&__tel {
+		margin: 0px 0px 40px 0px;
+
+		span {
+			color: #007ca5;
+			font-size: 17px;
+			display: block;
+			margin: 0px 0px 20px 0px;
+		}
+
+		a {
+			display: block;
+			font-weight: 700;
+			font-size: 20px;
+			line-height: calc(26 / 20);
+			font-family: "Circe";
+			color: #001e28;
+			transition: color 0.1s linear 0s;
+			@media (min-width: 992px){
+				&:hover {
+					color: $decor-bg-hover;
+					transition: color 0.1s linear 0s;
+				}
+			}
+			@media (max-width: $md4+px){
+				font-size: 16px;
+			}
+		}
+		@media (max-width: $md2+px){
+			margin: 0px 0px 30px 0px;
+		}
+	}
+
+	// .contacts-content__label
+	&__label {
+		font-size: 20px;
+		margin: 0px 0px 20px 0px;
+		max-width: 350px;
+		line-height: calc(26 / 20);
+		@media (max-width: $md4+px){
+			font-size: 16px;
+		}
+	}
+
+	// .contacts-content__mail
+	&__mail {
+		padding-bottom: 1px;
+		border-bottom: 1px solid #001e28;
+		font-size: 20px;
+		font-weight: 400;
+		color: #001e28;
+		font-family: "Circe";
+		display: inline-block;
+		transition: all 0.1s linear 0s;
+		@media (min-width: 992px){
+			&:hover {
+				border-bottom: 1px solid $decor-bg-hover;
+				color: $decor-bg-hover;
+				transition: all 0.1s linear 0s;
+			}
+		}
+	}
+	@media (max-width: $md2+px){
+	   padding: 70px 10px 70px 50px;
+	}
+	@media (max-width: $md4+px){
+		padding: 30px 10px 30px 15px;
+	}
+}
 
 //</ОСНОВНОЙ БЛОК>===========================================================================================================
