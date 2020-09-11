@@ -123,14 +123,23 @@ function baloonstyle() {
 	$('.gm-style-iw').addClass('baloon-content');
 }
 
+
+var marker = true;
 var section = $('.education');
 var sectionTop = section.offset().top;
-$(window).bind('scroll', function(){
+
+function scrollShowMap() {
+	if ($("#map").length > 0) {
+		map(1);
+	}
+	marker = false;
+}
+
+$(window).on('scroll', function(){
 	var windowTop = $(this).scrollTop();
 	if (windowTop > sectionTop){
-		if($("#map").length>0){
-			map(1);
+		if (marker){
+			scrollShowMap();
 		}
-		$(window).unbind('scroll');
 	}
 });
