@@ -1214,7 +1214,11 @@ body._lock {
 	}
 
 	@media (max-width: $md3+px) {
-		padding: 50px 0px 80px;
+		padding: 50px 0px 20px;
+	}
+	@media (max-width: $md4+px) {
+		padding: 50px 0px 20px;
+		background: none !important;
 	}
 }
 
@@ -1318,9 +1322,6 @@ body._lock {
 	background: url("../../dist/img/bg-decor-02.png") top no-repeat;
 	padding: 130px 0px 100px;
 
-	// .reviews__container
-	&__container {}
-
 	// .reviews__title
 	&__title {
 		max-width: 670px;
@@ -1336,11 +1337,13 @@ body._lock {
 		}
 	}
 
-	// .reviews__slider
-	&__slider {}
-
 	@media (max-width: $md3+px) {
 		padding: 100px 0px 50px;
+	}
+
+	@media (max-width: $md4+px) {
+		padding: 50px 0px 50px;
+		background: none !important;
 	}
 
 }

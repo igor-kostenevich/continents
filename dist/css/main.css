@@ -2052,7 +2052,7 @@ body._lock {
   }
 
   .steps {
-    padding: 50px 0px 80px;
+    padding: 50px 0px 20px;
   }
 
   .license__title {
@@ -2313,6 +2313,11 @@ body._lock {
     margin: 0px 0px 50px 0px;
   }
 
+  .steps {
+    padding: 50px 0px 20px;
+    background: none !important;
+  }
+
   .license__item {
     margin: 0px 0px 50px;
   }
@@ -2323,6 +2328,11 @@ body._lock {
 
   .reviews__title .title__item {
     margin: 50px 0px 25px;
+  }
+
+  .reviews {
+    padding: 50px 0px 50px;
+    background: none !important;
   }
 
   .contacts-content__title .title__main {
